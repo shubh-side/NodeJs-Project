@@ -1,5 +1,9 @@
-Install Dependencies - 
+Install Dependencies:  
+```
 npm i -f
+```
 
-To run thee project - 
+To run the project:    
+```
 node server.js
+```
