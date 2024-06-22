@@ -16,6 +16,7 @@ app.post('/register', userController.registerUser);
 app.post('/login', userController.loginUser);
 app.get('/GetUser', userController.getUser);
 app.put('/UpdateUser', userController.updateUser);
+app.delete('/DeleteUser', userController.deleteUser);
 
 // Serve Swagger UI
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

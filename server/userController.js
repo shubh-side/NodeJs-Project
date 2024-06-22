@@ -61,3 +61,18 @@ exports.updateUser = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+exports.deleteUser = async (req, res) => {
+    try{
+        const userId = req.query.userId;
+        if(!userId){
+            throw new Error('Invalid UserId');
+        }
+
+        await User.findByIdAndUpdate(userId);
+        res.status(200).json({'Deleted User': userId});
+    }
+    catch(error){
+        res.status(500).json({error: error.message});
+    }
+}

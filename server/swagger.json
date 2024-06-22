@@ -113,6 +113,33 @@
             }
           }
         }
+      },
+      "/DeleteUser": {
+        "delete": {
+          "summary": "Delete user by ID",
+          "parameters": [
+            {
+              "in": "query",
+              "name": "userId",
+              "required": true,
+              "description": "ID of the user to be deleted",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "User deleted successfully"
+            },
+            "400": {
+              "description": "Bad Request"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
       }
     },
     "components": {
